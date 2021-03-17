@@ -1,7 +1,9 @@
+MIN = 1
 MAX = 100
+maxTipoTri = 3
 
 class tipo_v_p(): 
-    vector = [1 for i in range(MAX)]
+    vector = [MIN for x in range(MAX)]
 
 class tipo_poligono():
     n: int
@@ -12,14 +14,14 @@ class tipo_punto2d():
         y: float
 
 class tipo_v_t():
-     vector = [1 for i in range(MAX)]
+     vector = [MIN for x in range(MAX)]
 
 class tipo_triangulacion:
         n: int
         t: tipo_v_t
 
 class tipo_tri():
-     vector = [1 for i in range(3)]
+     vector = [MIN for x in range(maxTipoTri)]
 
 def triangulacion(tipo_poligono, tipo_v_p ):
 
