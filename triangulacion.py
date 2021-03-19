@@ -1,10 +1,43 @@
 import poligono
+import punto
 
-def area_triangulo_signo(self,a,b,c):
+class Triangulacion():
+    def __init__(self,poligono):
+        self.poligono = poligono
+    
+    def toString(self):
+        self.poligono.toString()
+
+    def triangulo(self):
+        tri = list()
+        tri.append(self.poligono.puntos[-1])
+        tri.append(self.poligono.puntos[0])
+        tri.append(self.poligono.puntos[1])
+        return poligono.Poligono(tri)
+
+    def area_triangulo_signo(self,a,b,c):
     AB = self.vector(p1 = a, p2 = b)
     AC = self.vector(p1 = a, p2 = c)
     BC = self.vector(p1 = b, p2 = c)
     return (self.AB.productoVectorial+self.AC.productoVectorial+self.BC.productoVectorial)/2.0
+ 
+class main():
+    A = punto.Punto(x = 0, y = 0)
+    B = punto.Punto(x = 0, y = 1)
+    C = punto.Punto(x = 1, y = 1)
+    D = punto.Punto(x = 1, y = 0)
+
+    cuadrado = poligono.Poligono(puntos = [A,B,C,D])
+    triangulacion = Triangulacion(poligono = cuadrado)
+    triangulacion.toString()
+
+    triangulo = triangulacion.triangulo()
+    triangulo.toString()
+
+    ivd = triangulacion.area_triangulo_signo(a = triangulo.puntos[0],b = triangulo.puntos[1], c = triangulo.puntos[2])
+    
+    if( <= 0 ||)
+
 
 '''class Cuadrado():
     A = tipo_punto2d(1,1)

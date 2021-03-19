@@ -7,7 +7,18 @@ class Poligono():
         self.lados = len(puntos)
         self.puntos = puntos
 
+    def toString(self):
+        print(self.lados)
+        print("[",end="")
+        for i in range(self.lados):
+            self.puntos[i].toString()
+        print("]")
+
 #Ejemplo creación de un poligono
-class main():
-    cuadrado = Poligono(puntos = [(0,0),(1,1),(1,0),(0,1)])
-    print(cuadrado.lados)
+'''class main():
+    A = punto.Punto(x = 0, y = 0)
+    B = punto.Punto(x = 0, y = 1)
+    C = punto.Punto(x = 1, y = 0)
+    D = punto.Punto(x = 1, y = 1)
+    cuadrado = Poligono(puntos = [A,D,C,B])
+    cuadrado.toString()'''
