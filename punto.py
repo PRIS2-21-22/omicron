@@ -15,10 +15,13 @@ class Punto():
         self.y = cordY
 
     def toString(self):
-        print("("+str(self.x)+","+str(self.y)+")",end=" ")
+        return "("+str(self.x)+","+str(self.y)+")"
 
 
-'''class main():
+class main():
+    print("CLASE PUNTO")
     punto = Punto(x = 0, y = 0)
-    punto.toString()'''
+    print("El punto introducido es:", end = " ")
+    print(punto.toString())
+    print()
     
