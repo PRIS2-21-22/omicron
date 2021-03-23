@@ -6,7 +6,7 @@ class Poligono():
     def __init__(self,puntos):
         self.lados = len(puntos)
         self.puntos = puntos
-
+    
     def toString(self):
         string = "["
         for i in range(len(self.puntos)):

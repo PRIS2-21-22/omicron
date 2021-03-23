@@ -3,12 +3,14 @@ import punto
 import vector
 
 class Triangulacion():
+    #Constructor al que le pasamos un poligono
     def __init__(self,poligono):
         self.poligono = poligono
     
     def toString(self):
         self.poligono.toString()
 
+    #Le pasamos un vertice y nos forma un triangulo con el vertice a su derecha y el de su izquierda
     def triangulo(self,punto):
         tri = list()
         tri.append(self.poligono.puntos[punto-1])
@@ -19,6 +21,7 @@ class Triangulacion():
             tri.append(self.poligono.puntos[punto+1])
         return poligono.Poligono(tri)
 
+    #Estos tres métodos son para comprobar si un vértice está dentro de un triangulo
     def trianguloIV(self,triangulo,p2):
         tri = list()
         tri.append(triangulo.puntos[0])
@@ -40,6 +43,7 @@ class Triangulacion():
         tri.append(self.poligono.puntos[p2])
         return poligono.Poligono(tri)
 
+#Método que nos devuelve el área de un triangulo para poder comprobar su signo
 def area_triangulo_signo(a,b,c):
         AB = vector.Vector(p1 = a, p2 = b)
         AC = vector.Vector(p1 = c, p2 = a)
