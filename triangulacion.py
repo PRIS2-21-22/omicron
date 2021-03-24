@@ -88,8 +88,7 @@ class main():
     v4 = punto.Punto(x = 14, y = 3)
     v5 = punto.Punto(x = 12, y = 5)
     v6 = punto.Punto(x = 10, y = 5)
-    
-    
+
     pol_concavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
     triangulacion = Triangulacion(poligono = pol_concavo)"""
 
@@ -102,7 +101,6 @@ class main():
     v6 = punto.Punto(x = 10, y = 4)
     v7 = punto.Punto(x = 6, y = 7)
     v8 = punto.Punto(x = 5, y =10)
-    
 
     pol_concavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
     triangulacion = Triangulacion(poligono = pol_concavo)"""
@@ -131,7 +129,7 @@ class main():
 
                 if(iv > 0 and vd > 0 and di > 0):
                     aux = aux + 1
-                    
+
             if(aux == 0):
                 print("Triángulo válido")
                 print("Eliminamos el vertice: v",end="")
@@ -150,7 +148,7 @@ class main():
             print(cont+eliminados)
             res = 1
             break
-    
+
     if(res == 0):
         print("Nuestro array de triangulos es:",end=" ")
         tipo_vector_triangulos.append(triangulacion.poligono)
@@ -165,7 +163,3 @@ class main():
         print("El polígono es convexo")
     else:
         print("El polígono es cóncavo")
-
-
-
-    

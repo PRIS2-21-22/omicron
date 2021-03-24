@@ -25,4 +25,3 @@ class main():
     print("El punto introducido es:", end = " ")
     print(punto.to_string())
     print()
-    
