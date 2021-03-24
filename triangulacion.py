@@ -7,7 +7,7 @@ class Triangulacion():
     #Constructor al que le pasamos un poligono
     def __init__(self,poligono):
         self.poligono = poligono
-    
+
     def to_string(self):
         self.poligono.to_string()
 

@@ -29,23 +29,25 @@ class Vector():
         division = ((self.p2.get_y()-self.p1.get_y())/(self.p2.get_x()-self.p1.get_x()))
         return f"y = {division}*(x-{self.p1.get_x()}) + {self.p1.get_y()}"
 
-    #Ecuación de la recta dada una pendiente y la ordenada de origen
-    def ecuacion_recta2(self,pendiente,ordenada):
-        return f"y = {pendiente}*x + {ordenada}"
+#Ecuación de la recta dada una pendiente y la ordenada de origen
+def ecuacion_recta2(pendiente,ordenada):
+    return f"y = {pendiente}*x + {ordenada}"
 
-    #Ecuación de la recta dada una pendiente y un punto de esta
-    def ecuacion_recta3(self,pendiente,punto):
-        return f"y = {pendiente}*(x-{punto.get_x()}) + {punto.get_y()}"
+#Ecuación de la recta dada una pendiente y un punto de esta
+def ecuacion_recta3(pendiente,punto):
+    return f"y = {pendiente}*(x-{punto.get_x()}) + {punto.get_y()}"
 
-    #Ecuación de la recta dados los coeficientes del polinomio de su representación explícita
-    def ecuacion_recta4(self,a,b,c):
-        return f"{a}*x + {b}*y + {c} = 0"
+#Ecuación de la recta dados los coeficientes del polinomio de su representación explícita
+def ecuacion_recta4(a,b,c):
+    return f"{a}*x + {b}*y + {c} = 0"
 
-    def ecuacion_recta5(self, x0):
-        return f"x = {x0}"
+#Ecuación de la recta horizontal
+def ecuacion_recta5(x0):
+    return f"x = {x0}"
 
-    def ecuacion_recta6(self, y0):
-        return f"y = {y0}"
+#Ecuación de la recta vertical
+def ecuacion_recta6(y0):
+    return f"y = {y0}"
 
 def representacion_implicita(linea):
     items = linea.split(' + ')
