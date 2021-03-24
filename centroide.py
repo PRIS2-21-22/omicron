@@ -61,5 +61,5 @@ class main():
     xcent = centroide.xcent(area = area)
     ycent = centroide.ycent(area = area)
 
-    puntoCentroide = punto.Punto(x = xcent, y = ycent)
+    punto_centroide = punto.Punto(x = xcent, y = ycent)
     print(f"El centroide del poligono introducido es: {puntoCentroide.to_string()}")

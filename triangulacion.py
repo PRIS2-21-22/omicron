@@ -8,8 +8,8 @@ class Triangulacion():
     def __init__(self,poligono):
         self.poligono = poligono
     
-    def toString(self):
-        self.poligono.toString()
+    def to_string(self):
+        self.poligono.to_string()
 
     #Le pasamos un vertice y nos forma un triangulo con el vertice a su derecha y el de su izquierda
     def triangulo(self,punto):
@@ -49,18 +49,18 @@ def area_triangulo_signo(a,b,c):
         AB = vector.Vector(p1 = a, p2 = b)
         AC = vector.Vector(p1 = c, p2 = a)
         BC = vector.Vector(p1 = b, p2 = c)
-        return (AB.productoVectorial()+AC.productoVectorial()+BC.productoVectorial())/2.0
+        return (AB.producto_vectorial()+AC.producto_vectorial()+BC.producto_vectorial())/2.0
  
 class main():
     print("CLASE TRIANGULACION")
     
     #Debería ser convexo
-    v1 = punto.Punto(x=0, y = 0)
+    """v1 = punto.Punto(x=0, y = 0)
     v2 = punto.Punto(x= 1, y = 0)
     v3 = punto.Punto(x=0.5, y = 1)
 
     triangulo = poligono.Poligono(puntos = [v1,v2,v3])
-    triangulacion = Triangulacion(poligono = triangulo)
+    triangulacion = Triangulacion(poligono = triangulo)"""
 
     #Debería ser convexo
     """v1 = punto.Punto(x = -2.0, y = -4.0)
@@ -82,7 +82,7 @@ class main():
     triangulacion = Triangulacion(poligono = pentagono)"""
 
     #Debería ser cóncavo
-    """v1 = punto.Punto(x = 12, y = 3)
+    v1 = punto.Punto(x = 12, y = 3)
     v2 = punto.Punto(x = 10, y = 1)
     v3 = punto.Punto(x = 13, y = 1)
     v4 = punto.Punto(x = 14, y = 3)
@@ -91,7 +91,7 @@ class main():
     
     
     polConcavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
-    triangulacion = Triangulacion(poligono = polConcavo)"""
+    triangulacion = Triangulacion(poligono = polConcavo)
 
     #Debería ser cóncavo
     """v1 = punto.Punto(x = 5, y = 0)
@@ -121,13 +121,13 @@ class main():
         if(ivd > 0):
             aux = 0
             for i in range(len(triangulacion.poligono.puntos)-1):
-                trianguloIV = triangulacion.triangulo_iv(triangulo = triangulo, p2 = i)
-                trianguloVD = triangulacion.triangulo_vd(triangulo = triangulo, p2 = i)
-                trianguloDI = triangulacion.triangulo_di(triangulo = triangulo, p2 = i)
+                triangulo_iv = triangulacion.triangulo_iv(triangulo = triangulo, p2 = i)
+                triangulo_vd = triangulacion.triangulo_vd(triangulo = triangulo, p2 = i)
+                triangulo_di = triangulacion.triangulo_di(triangulo = triangulo, p2 = i)
 
-                iv = area_triangulo_signo(a = trianguloIV.puntos[0], b = trianguloIV.puntos[1], c = trianguloIV.puntos[2])
-                vd = area_triangulo_signo(a = trianguloVD.puntos[0], b = trianguloVD.puntos[1], c = trianguloVD.puntos[2])
-                di = area_triangulo_signo(a = trianguloDI.puntos[0], b = trianguloDI.puntos[1], c = trianguloDI.puntos[2])
+                iv = area_triangulo_signo(a = triangulo_iv.puntos[0], b = triangulo_iv.puntos[1], c = triangulo_iv.puntos[2])
+                vd = area_triangulo_signo(a = triangulo_vd.puntos[0], b = triangulo_vd.puntos[1], c = triangulo_vd.puntos[2])
+                di = area_triangulo_signo(a = triangulo_di.puntos[0], b = triangulo_di.puntos[1], c = triangulo_di.puntos[2])
 
                 if(iv > 0 and vd > 0 and di > 0):
                     aux = aux + 1

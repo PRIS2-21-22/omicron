@@ -11,9 +11,9 @@ class Punto():
     def get_y(self):
         return self.y
 
-    def set_coord(self,cordX, cordY):
-        self.x = cordX
-        self.y = cordY
+    def set_coord(self,cord_x, cord_y):
+        self.x = cord_x
+        self.y = cord_y
 
     def to_string(self):
         return "("+str(self.x)+","+str(self.y)+")"
