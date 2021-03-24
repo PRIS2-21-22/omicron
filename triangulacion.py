@@ -90,8 +90,8 @@ class main():
     v6 = punto.Punto(x = 10, y = 5)
     
     
-    polConcavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
-    triangulacion = Triangulacion(poligono = polConcavo)
+    pol_oncavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
+    triangulacion = Triangulacion(poligono = pol_concavo)
 
     #Debería ser cóncavo
     """v1 = punto.Punto(x = 5, y = 0)
@@ -104,8 +104,8 @@ class main():
     v8 = punto.Punto(x = 5, y =10)
     
 
-    polConcavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
-    triangulacion = Triangulacion(poligono = polConcavo)"""
+    pol_concavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
+    triangulacion = Triangulacion(poligono = pol_concavo)"""
 
     print("Nuestro poligono está formado por los puntos: ",end = " ")
     print(triangulacion.poligono.to_string())
