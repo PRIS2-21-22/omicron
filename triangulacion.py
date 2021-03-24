@@ -53,7 +53,7 @@ def area_triangulo_signo(a,b,c):
 
 class main():
     print("CLASE TRIANGULACION")
-    
+
     #Debería ser convexo
     """v1 = punto.Punto(x=0, y = 0)
     v2 = punto.Punto(x= 1, y = 0)
