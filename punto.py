@@ -1,3 +1,4 @@
+#Esta clase se encarga de la representación de un punto en un espacio de 2D
 class Punto():
     #Constructor de la clase Punto
     def __init__(self,x,y):

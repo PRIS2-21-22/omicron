@@ -1,3 +1,4 @@
+#Esta clase se encarga de crear un vector entre dos puntos y para trabajar con las ecuaciones de recta
 import math
 import punto
 

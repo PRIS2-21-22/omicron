@@ -1,3 +1,4 @@
+#Subprograma para la comprobación de si un poligono es cóncavo o convexo utilizando el algoritmo del corte de oreja
 import poligono
 import punto
 import vector

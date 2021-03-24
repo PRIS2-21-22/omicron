@@ -1,3 +1,4 @@
+#Esta clase se encarga de la representación de un poligono a través de un array de puntos
 import punto
 import vector
 

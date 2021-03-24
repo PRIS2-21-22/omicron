@@ -1,3 +1,4 @@
+#Programa principal para el cálculo del centroide de un poligono
 import poligono
 import punto
 
