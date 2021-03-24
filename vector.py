@@ -81,18 +81,18 @@ class main():
     print(f"Ecuacion de la recta: {v.ecuacion_recta()}")
     m = 5
     b = 4
-    print(f"Dados una pendiente {m} y una ordenada {b}, la ecuación de la recta es: {v.ecuacion_recta2(pendiente = m, ordenada = b)}")
-    print(f"Dada una pendiente {m} y un punto {v.p1.to_string()}, la ecuación de la recta es: {v.ecuacion_recta3(pendiente = m, punto = v.p1)}")
+    print(f"Dados una pendiente {m} y una ordenada {b}, la ecuación de la recta es: {ecuacion_recta2(pendiente = m, ordenada = b)}")
+    print(f"Dada una pendiente {m} y un punto {v.p1.to_string()}, la ecuación de la recta es: {ecuacion_recta3(pendiente = m, punto = v.p1)}")
     a = 1
     b = 2
     c = 0
-    print(f"Dados los coeficientes {a}, {b} y {c}, la ecuación de la recta es: {v.ecuacion_recta4(a = a, b = b , c = c)}")
-    print(f"Dada la abscisa {v.p1.get_x()}, la ecuación de la recta (vertical) es: {v.ecuacion_recta5(x0 = v.p1.get_x())}")
-    print(f"Dada la ordenada {v.p1.get_y()}, la ecuación de la recta (horizontal) es: {v.ecuacion_recta6(y0 = v.p1.get_y())}")
+    print(f"Dados los coeficientes {a}, {b} y {c}, la ecuación de la recta es: {ecuacion_recta4(a = a, b = b , c = c)}")
+    print(f"Dada la abscisa {v.p1.get_x()}, la ecuación de la recta (vertical) es: {ecuacion_recta5(x0 = v.p1.get_x())}")
+    print(f"Dada la ordenada {v.p1.get_y()}, la ecuación de la recta (horizontal) es: {ecuacion_recta6(y0 = v.p1.get_y())}")
 
     print(f"La recta {v.ecuacion_recta()} en forma implícita sería: {representacion_implicita(linea = v.ecuacion_recta())}")
-    print(f"La recta {v.ecuacion_recta2(pendiente = m, ordenada = b)} en forma implícita sería: {representacion_implicita(linea = v.ecuacion_recta2(pendiente = m, ordenada = b))}")
-    print(f"La recta {v.ecuacion_recta3(pendiente = m, punto = v.p1)} en forma implícita sería: {representacion_implicita(linea = v.ecuacion_recta3(pendiente = m, punto = v.p1))}")
+    print(f"La recta {ecuacion_recta2(pendiente = m, ordenada = b)} en forma implícita sería: {representacion_implicita(linea = ecuacion_recta2(pendiente = m, ordenada = b))}")
+    print(f"La recta {ecuacion_recta3(pendiente = m, punto = v.p1)} en forma implícita sería: {representacion_implicita(linea = ecuacion_recta3(pendiente = m, punto = v.p1))}")
 
     p3 = punto.Punto(x = 4, y = 4)
     p4 = punto.Punto(x = 5, y = 5)

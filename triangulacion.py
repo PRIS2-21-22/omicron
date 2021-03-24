@@ -50,7 +50,7 @@ def area_triangulo_signo(a,b,c):
         AC = vector.Vector(p1 = c, p2 = a)
         BC = vector.Vector(p1 = b, p2 = c)
         return (AB.producto_vectorial()+AC.producto_vectorial()+BC.producto_vectorial())/2.0
- 
+
 class main():
     print("CLASE TRIANGULACION")
     
@@ -63,13 +63,13 @@ class main():
     triangulacion = Triangulacion(poligono = triangulo)"""
 
     #Debería ser convexo
-    """v1 = punto.Punto(x = -2.0, y = -4.0)
+    v1 = punto.Punto(x = -2.0, y = -4.0)
     v2 = punto.Punto(x = 6.0, y = -2.0)
     v3 = punto.Punto(x = 7.0, y = 4.0)
     v4 = punto.Punto(x = -8.0, y = 2.0)
 
     cuadrado = poligono.Poligono(puntos = [v1,v2,v3,v4])
-    triangulacion = Triangulacion(poligono = cuadrado)"""
+    triangulacion = Triangulacion(poligono = cuadrado)
 
     #Debería ser convexo
     """v1 = punto.Punto(x = 8.0, y = 2.0)
@@ -82,7 +82,7 @@ class main():
     triangulacion = Triangulacion(poligono = pentagono)"""
 
     #Debería ser cóncavo
-    v1 = punto.Punto(x = 12, y = 3)
+    """v1 = punto.Punto(x = 12, y = 3)
     v2 = punto.Punto(x = 10, y = 1)
     v3 = punto.Punto(x = 13, y = 1)
     v4 = punto.Punto(x = 14, y = 3)
@@ -91,7 +91,7 @@ class main():
     
     
     pol_concavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
-    triangulacion = Triangulacion(poligono = pol_concavo)
+    triangulacion = Triangulacion(poligono = pol_concavo)"""
 
     #Debería ser cóncavo
     """v1 = punto.Punto(x = 5, y = 0)
