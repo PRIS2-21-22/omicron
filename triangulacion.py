@@ -55,6 +55,14 @@ class main():
     print("CLASE TRIANGULACION")
     
     #Debería ser convexo
+    v1 = punto.Punto(x=0, y = 0)
+    v2 = punto.Punto(x= 1, y = 0)
+    v3 = punto.Punto(x=0.5, y = 1)
+
+    triangulo = poligono.Poligono(puntos = [v1,v2,v3])
+    triangulacion = Triangulacion(poligono = triangulo)
+    
+    #Debería ser convexo
     """v1 = punto.Punto(x = -2.0, y = -4.0)
     v2 = punto.Punto(x = 6.0, y = -2.0)
     v3 = punto.Punto(x = 7.0, y = 4.0)
@@ -74,7 +82,7 @@ class main():
     triangulacion = Triangulacion(poligono = pentagono)"""
 
     #Debería ser cóncavo
-    v1 = punto.Punto(x = 12, y = 3)
+    """v1 = punto.Punto(x = 12, y = 3)
     v2 = punto.Punto(x = 10, y = 1)
     v3 = punto.Punto(x = 13, y = 1)
     v4 = punto.Punto(x = 14, y = 3)
@@ -83,7 +91,7 @@ class main():
     
     
     polConcavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
-    triangulacion = Triangulacion(poligono = polConcavo)
+    triangulacion = Triangulacion(poligono = polConcavo)"""
 
     #Debería ser cóncavo
     """v1 = punto.Punto(x = 5, y = 0)
