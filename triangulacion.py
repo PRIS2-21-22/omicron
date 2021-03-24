@@ -90,7 +90,7 @@ class main():
     v6 = punto.Punto(x = 10, y = 5)
     
     
-    pol_oncavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
+    pol_concavo = poligono.Poligono(puntos = [v1,v2,v3,v4,v5,v6])
     triangulacion = Triangulacion(poligono = pol_concavo)
 
     #Debería ser cóncavo
