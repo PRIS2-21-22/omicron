@@ -23,21 +23,21 @@ class Triangulacion():
         return poligono.Poligono(tri)
 
     #Estos tres métodos son para comprobar si un vértice está dentro de un triangulo
-    def trianguloIV(self,triangulo,p2):
+    def triangulo_iv(self,triangulo,p2):
         tri = list()
         tri.append(triangulo.puntos[0])
         tri.append(triangulo.puntos[1])
         tri.append(self.poligono.puntos[p2])
         return poligono.Poligono(tri)
 
-    def trianguloVD(self,triangulo,p2):
+    def triangulo_vd(self,triangulo,p2):
         tri = list()
         tri.append(triangulo.puntos[1])
         tri.append(triangulo.puntos[2])
         tri.append(self.poligono.puntos[p2])
         return poligono.Poligono(tri)
 
-    def trianguloDI(self,triangulo,p2):
+    def triangulo_di(self,triangulo,p2):
         tri = list()
         tri.append(triangulo.puntos[2])
         tri.append(triangulo.puntos[0])
@@ -61,7 +61,7 @@ class main():
 
     triangulo = poligono.Poligono(puntos = [v1,v2,v3])
     triangulacion = Triangulacion(poligono = triangulo)
-    
+
     #Debería ser convexo
     """v1 = punto.Punto(x = -2.0, y = -4.0)
     v2 = punto.Punto(x = 6.0, y = -2.0)
@@ -108,7 +108,7 @@ class main():
     triangulacion = Triangulacion(poligono = polConcavo)"""
 
     print("Nuestro poligono está formado por los puntos: ",end = " ")
-    print(triangulacion.poligono.toString())
+    print(triangulacion.poligono.to_string())
 
     tipo_vector_triangulos = list()
     cont = 0
@@ -121,9 +121,9 @@ class main():
         if(ivd > 0):
             aux = 0
             for i in range(len(triangulacion.poligono.puntos)-1):
-                trianguloIV = triangulacion.trianguloIV(triangulo = triangulo, p2 = i)
-                trianguloVD = triangulacion.trianguloVD(triangulo = triangulo, p2 = i)
-                trianguloDI = triangulacion.trianguloDI(triangulo = triangulo, p2 = i)
+                trianguloIV = triangulacion.triangulo_iv(triangulo = triangulo, p2 = i)
+                trianguloVD = triangulacion.triangulo_vd(triangulo = triangulo, p2 = i)
+                trianguloDI = triangulacion.triangulo_di(triangulo = triangulo, p2 = i)
 
                 iv = area_triangulo_signo(a = trianguloIV.puntos[0], b = trianguloIV.puntos[1], c = trianguloIV.puntos[2])
                 vd = area_triangulo_signo(a = trianguloVD.puntos[0], b = trianguloVD.puntos[1], c = trianguloVD.puntos[2])
@@ -157,9 +157,9 @@ class main():
         string = "["
         for i in range(len(tipo_vector_triangulos)):
             if(i!=len(tipo_vector_triangulos)-1):
-                string = string + tipo_vector_triangulos[i].toString() + ", "
+                string = string + tipo_vector_triangulos[i].to_string() + ", "
             else:
-                string = string + tipo_vector_triangulos[i].toString()
+                string = string + tipo_vector_triangulos[i].to_string()
         string = string +"]"
         print(string)
         print("El polígono es convexo")

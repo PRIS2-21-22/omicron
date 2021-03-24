@@ -15,7 +15,7 @@ class Punto():
         self.x = cordX
         self.y = cordY
 
-    def toString(self):
+    def to_string(self):
         return "("+str(self.x)+","+str(self.y)+")"
 
 
@@ -23,6 +23,6 @@ class main():
     print("CLASE PUNTO")
     punto = Punto(x = 0, y = 0)
     print("El punto introducido es:", end = " ")
-    print(punto.toString())
+    print(punto.to_string())
     print()
     

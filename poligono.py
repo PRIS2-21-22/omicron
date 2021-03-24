@@ -1,6 +1,5 @@
 #Esta clase se encarga de la representación de un poligono a través de un array de puntos
 import punto
-import vector
 
 class Poligono():
     #Constructor de la clase Poligono
@@ -8,13 +7,13 @@ class Poligono():
         self.lados = len(puntos)
         self.puntos = puntos
     
-    def toString(self):
+    def to_string(self):
         string = "["
         for i in range(len(self.puntos)):
             if(i!=len(self.puntos)-1):
-                string = string + self.puntos[i].toString() + ", "
+                string = string + self.puntos[i].to_string() + ", "
             else:
-                string = string + self.puntos[i].toString()
+                string = string + self.puntos[i].to_string()
         string = string + "]"
         return string
 
@@ -27,13 +26,13 @@ class main():
     D = punto.Punto(x = 1, y = 1)
     cuadrado = Poligono(puntos = [A,B,C,C])
     print("Los puntos del poligono \"cuadrado\" son:", end = " ")
-    print(cuadrado.toString())
+    print(cuadrado.to_string())
 
     cuadrado.puntos.pop(0)
     print("Eliminaremos el primer punto:", end = " ")
-    print(cuadrado.toString())
+    print(cuadrado.to_string())
 
     cuadrado.puntos.pop(0)
     print("Probamos a eliminar otra vez el primer punto:", end = " ")
-    print(cuadrado.toString())
+    print(cuadrado.to_string())
     print()
